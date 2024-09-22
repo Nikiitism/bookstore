@@ -10,7 +10,7 @@ function Contact() {
 
   return (
     <div className="min-h-screen flex items-center justify-center">
-      <form onSubmit={handleSubmit(onSubmit)} className="bg-white p-6 rounded-md shadow-md w-96">
+      <form onSubmit={handleSubmit(onSubmit)} className="bg-white p-6 rounded-md shadow-md w-96 text-black">
         <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
 
         {/* Input Field */}

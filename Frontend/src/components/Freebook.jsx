@@ -1,14 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import list from "../../public/list.json";
+// import list from "../../public/list.json";
+import axios from "axios"
 
 import Cards from './Cards';
 
 
 export default function Freebook() {
-    const filterData = list.filter((data) => data.category === "Free");
+     
+    const [book,setBook]= useState([]);
+    useEffect(()=>{
+      const getBook = async()=>{
+        try{
+         const res = await axios.get("http://localhost:4001/book");
+         setBook(res.data.filter((data) => data.category === "Free"))
+         console.log(data)
+        }
+        catch(error){
+          console.log(error)
+        }
+      };
+      getBook();
+    },[]);
+    // const filterData = list.filter((data) => data.category === "Free");
 
     var settings = {
         dots: true,
@@ -50,12 +66,12 @@ export default function Freebook() {
 
             <div>
                 <h1 className='font-bold text-xl pb-2'>Free Offered Courses</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore enim at provident, autem voluptas, dolorum rem similique ratione animi laboriosam molestiae itaque error, quis ea quidem nostrum explicabo. Quibusdam, totam?</p>
+                <p>Discover a world of knowledge with our extensive collection of free books, available for you to explore across countless topics and genres. Start your learning journey today, and broaden your horizons—all at no cost!</p>
             </div>
 
             <div className="slider-container hover:" >
                 <Slider {...settings}>
-                    {filterData.map((item) => (
+                    {book.map((item) => (
                         <Cards item={item} key={item.id} />
                     ))}
                 </Slider>

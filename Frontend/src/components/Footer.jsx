@@ -7,7 +7,7 @@ export default function footer() {
       <footer className="footer footer-center dark:text-white text-black text-base-content rounded p-10 ">
   <nav className="grid grid-flow-col gap-4">
     <a className="link link-hover">About us</a>
-    <a className="link link-hover">Contact</a>
+    <a className="link link-hover" href='/contact'>Contact</a>
     <a className="link link-hover">Jobs</a>
     <a className="link link-hover">Press kit</a>
   </nav>

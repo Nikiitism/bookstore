@@ -1,5 +1,5 @@
 import React from 'react'
-import photo1 from "../../public/photo9.avif"
+import photo1 from "../../public/photo2.avif"
 
 
 
@@ -12,7 +12,7 @@ export default function Banner() {
         <div className='space-y-12'>
           <h1 className='text-4xl font-bold'>Hello, Welcome to learn something <span className='text-pink-500'>new everyday!!!</span></h1>
 
-          <p className='text-xl'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et labore commodi illo nisi nam? Iste culpa, sint qui delectus, at, autem dolorum quasi odit tempora asperiores vel ipsam modi error?</p>
+          <p className='text-xl'>Explore an expansive library of free books that cater to every curiosity and interest. Whether you're seeking inspiration, knowledge, or a good story, our diverse collection is designed to enrich your mind and fuel your passion for reading.</p>
 
           <label className="input input-bordered border-4 flex items-center gap-2 md:mr-16 bg-white">
             <svg
@@ -32,7 +32,7 @@ export default function Banner() {
       </div>
 
       <div className='order-1 w-full md:w-1/2 ml-0 md:ml-auto mt-20 flex justify-center'>
-      <img src={photo1} className='w-80 h-80 mx-auto md:mx-0 md:ml-16 md:mt-12 xl:ml-70 object-contain' />
+      <img src={photo1} className='w-[450px] h-[450px] mx-auto md:mx-0 md:ml-16 md:mt-12 xl:ml-70 object-contain' />
       </div>
 
     </div>
